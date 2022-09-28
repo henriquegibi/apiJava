@@ -69,3 +69,11 @@ Added dummy data for test:
 - Added *api-java-lambda-role* to Lambda
 - Uploaded file *jar* generated on IntelliJ
 - Renamed the handler to: *click.henriquegibi.aws.crud.lambda.api.ProductLambdaHandler::handleRequest*
+- Teste feito com o seguinte *PathParameters*:
+```json
+{
+  "pathParameters": {
+      "id":"1"
+  }
+}
+```
