@@ -8,6 +8,33 @@
 
 <br>
 
+#### Libaries/dependencies/plugins used on IntelliJ:
+
+> Also possible to verify the **pom.xml** file if you prefer
+
+
+- **aws-lambda-java-core**
+This library gives us two interfaces for handler method: RequestHandler and RequestStreamHandler
+
+- **aws-java-sdk-dynamodb**
+This SDK library has the client classes that are used for communicating with AWS DynamoDB
+
+- **json-simple**
+This library allow us to create and work with JSON
+
+- **gson**
+With this, it is possible to create string from a java object and java object from json string
+
+- **mavem-compiler-plugin**
+This plugin is used to compile the source code of a mavem project to an executable program
+
+- **mavem-shade-plugin**
+Provides capability to package the artifact in an uber-jar
+
+- **gson**
+With this, it is possible to create string from a java object and java object from json string
+ <br>
+
 ### On AWS account, it was created:
 - IAM Role
 - DynamoDB
@@ -16,14 +43,15 @@
 
 <br>
 
-- **IAM Role**
+**IAM Role**
 
-Used a role with FullyDynamoDB access and BasicLambdaExecution
-Allowed Lambda to read and write to DynamoDB and create logs
+- Created a role: *api-java-lambda-role*
+   - *FullyDynamoDB access* and *BasicLambdaExecution*
+   - Allowed Lambda to read and write to DynamoDB and create logs
 
 <br>
 
-- **DynamoDB**
+**DynamoDB**
 
 Added dummy data for test:
 ```json
@@ -36,48 +64,8 @@ Added dummy data for test:
 
 <br>
 
-- **Lambda function**
+**Lambda function**
 
-
-
-<br>
-
-#### Libaries/dependencies/plugins used:
-
-> Also possible to verify the **pom.xml** file if you prefer
-
-<br>
-
-- **aws-lambda-java-core**
-This library gives us two interfaces for handler method: RequestHandler and RequestStreamHandler
-
-
-<br>
-
-- **aws-java-sdk-dynamodb**
-This SDK library has the client classes that are used for communicating with AWS DynamoDB
-
-<br>
-
-- **json-simple**
-This library allow us to create and work with JSON
-
-<br>
-
-- **gson**
-With this, it is possible to create string from a java object and java object from json string
-
-<br>
-
-- **mavem-compiler-plugin**
-This plugin is used to compile the source code of a mavem project to an executable program
-
-<br>
-
-- **mavem-shade-plugin**
-Provides capability to package the artifact in an uber-jar
-
-<br>
-
-- **gson**
-With this, it is possible to create string from a java object and java object from json string
+- Added *api-java-lambda-role* to Lambda
+- Uploaded file *jar* generated on IntelliJ
+- Renamed the handler to: *click.henriquegibi.aws.crud.lambda.api.ProductLambdaHandler::handleRequest*
